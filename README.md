@@ -2,7 +2,9 @@
 *A Discord Bot for the McTyeire wizgang Discord server*
 
 ### Current Feature Set
+* **About** - Displays the about page for the bot
 * **Birthday** - Allows users to set their birthday and receive a birthday message on their birthday.
+* **Help** - Displays the help page for the bot with command descriptions
 * **Ping** - Allows users to ping the bot and receive the bot's latency in milliseconds.
 
 ### Changelog
