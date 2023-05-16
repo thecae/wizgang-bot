@@ -3,7 +3,7 @@ from discord.ext import commands
 import os
 
 # get the token from the tokens.txt file
-with open('../tokens.txt', 'r') as file:
+with open('storage/token.txt', 'r') as file:
     lines = [line.strip().split(': ') for line in file.readlines()]
     for item in lines:
         if item[0] == 'wizgang':
@@ -20,8 +20,6 @@ async def setup_hook():
     for filename in os.listdir('./cogs'):
         if filename.endswith('.py'):
             await client.load_extension(f'cogs.{filename[:-3]}')
-        else:
-            print("Unable to load pycache folder.")
 
 
 # on ready -- print bot info
