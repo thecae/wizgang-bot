@@ -57,6 +57,11 @@ class Help(commands.Cog):
             value='Enter your birthday as the argument and we\'ll send you a nice message on your birthday!',
             inline=False
         )
+        embed.add_field(
+            name='/snipe',
+            value='Remembers the last deleted message and will snipe it for you!',
+            inline=False
+        )
 
         await ctx.send(embed=embed)
 

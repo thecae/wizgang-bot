@@ -6,8 +6,11 @@
 * **Birthday** - Allows users to set their birthday and receive a birthday message on their birthday.
 * **Help** - Displays the help page for the bot with command descriptions
 * **Ping** - Allows users to ping the bot and receive the bot's latency in milliseconds.
+* **Snipe** - Allows users to snipe messages that have been deleted.
 
 ### Changelog
+* **0.3.0** (*17MAY 5:00pm*)
+  * Added **snipe** command
 * **0.2.0** (*16MAY 6:30am*)
   * Added **help** command
   * Added **about** command
