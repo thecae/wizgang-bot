@@ -31,7 +31,7 @@ class AboutMe(commands.Cog):
         embed.set_author(name='Wizard101 Bot', icon_url='https://cdn.discordapp.com/attachments/733788698277052438/1107984909789835285/merle-ambrose.png')
         embed.add_field(name='My prefix:', value='\"`/`\"', inline=True)
         embed.add_field(name='Need help?', value='Type `/help` for assistance!', inline=True)
-        embed.add_field(name='List of Commands', value='* birthday\n * ping\n * snipe', inline=False)
+        embed.add_field(name='List of Commands', value='* birthday\n * ping\n * register_counter\n * snipe', inline=False)
 
         await ctx.send(embed=embed)
 

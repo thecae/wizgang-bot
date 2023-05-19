@@ -58,6 +58,11 @@ class Help(commands.Cog):
             inline=False
         )
         embed.add_field(
+            name='/register_counter',
+            value='Register a counter in the current channel.  Bot will then track users counting successive counts, and resets when a user gets one wrong!',
+            inline=False
+        )
+        embed.add_field(
             name='/snipe',
             value='Remembers the last deleted message and will snipe it for you!',
             inline=False

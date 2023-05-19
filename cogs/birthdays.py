@@ -1,3 +1,4 @@
+import discord
 from discord.ext import commands, tasks
 from datetime import datetime, timedelta, time
 import asyncio
@@ -41,8 +42,24 @@ class Birthdays(commands.Cog):
     @commands.command()
     async def remember_birthday(self, ctx):
         date = validate_date(ctx.message.content.split()[1])
+        if self.birthdays.get(ctx.author.id) is not None:
+            embed = discord.Embed(title='Warning!', description=f'<@{ctx.author.id}> has already registered a birthday!',
+                                    color=0xeed202)
+            embed.set_footer(text='Use /forget_birthday to forget your birthday.')
+            await ctx.send(embed=embed)
+            return
         self.birthdays[ctx.author.id] = date.date().isoformat()
-        await ctx.send(f"I've remembered your birthday as {date}.")
+        await ctx.send(embed=discord.Embed(title='Success!', description=f'I\'ve remembered your birthday as {date}', color=0x4bb543))
+
+    @commands.command()
+    async def forget_birthday(self, ctx):
+        if self.birthdays.get(ctx.author.id) is None:
+            embed = discord.Embed(title='Warning!', description=f'<@{ctx.author.id}> has not registered a birthday!',
+                                    color=0xeed202)
+            embed.set_footer(text='Use /remember_birthday to remember your birthday.')
+            await ctx.send(embed=embed)
+        self.birthdays.pop(ctx.author.id)
+        await ctx.send(embed=discord.Embed(title='Success!', description=f'I\'ve forgotten <@{ctx.author.id}>\'s birthday.', color=0x4bb543))
 
     @tasks.loop(hours=24)
     async def check_birthdays(self):

@@ -9,6 +9,9 @@
 * **Snipe** - Allows users to snipe messages that have been deleted.
 
 ### Changelog
+* **0.3.0** (*19MAY 4:00pm*)
+  * Built counting bot functionality! Use `/register_counter` to register the counter to a specified channel.  Messages in other channels will not be interpreted for the count.
+  * Modified `/register_birthday` to warn users of registering multiple birthdays.  A `/forget_birthday` command was added to allow someone to forget their birthday. *A future implementation might do better at combining these, but I want to add more features before improving on current ones.*
 * **0.3.0** (*17MAY 5:00pm*)
   * Added **snipe** command
 * **0.2.0** (*16MAY 6:30am*)
