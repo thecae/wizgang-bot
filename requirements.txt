@@ -1,0 +1,11 @@
+aiohttp==3.8.4
+airtable==0.4.8
+async-timeout==4.0.2
+attrs==23.1.0
+beautifulsoup4==4.12.2
+bs4==0.0.1
+discord==2.2.3
+discord.py==2.2.3
+multidict==6.0.4
+pandas==2.0.1
+yarl==1.9.2
