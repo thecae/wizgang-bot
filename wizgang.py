@@ -6,7 +6,7 @@ import os
 with open('storage/token.txt', 'r') as file:
     lines = [line.strip().split(': ') for line in file.readlines()]
     for item in lines:
-        if item[0] == 'wizgang':
+        if item[0] == 'token':
             token = item[1]
 
 # create the bot
@@ -25,7 +25,7 @@ async def setup_hook():
 # on ready -- print bot info
 @client.event
 async def on_ready():
-    print('Bot is online.')
+    print('wizgang Bot is online.')
     print(f'Version: {discord.__version__}')
     await client.change_presence(activity=discord.Game(name='Wizard101', type=3))
 
